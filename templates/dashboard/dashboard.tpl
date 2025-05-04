@@ -20,7 +20,6 @@
                                 <button class="delete pico-background-red-500">Delete</button>
                                 <button class="update pico-background-green-300">Update</button>
                             </fieldset>
-                            {% endif %}
                         {% endforeach %}
                     </label>
                 </fieldset>
