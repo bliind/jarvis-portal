@@ -16,7 +16,11 @@
                         Moderator Roles
                         {% foreach ($configs as $config): %}
                             {% if ($config->key == 'moderator_roles'): %}
-                            <input type="text" name="moderator_roles[]" value="{% $config->value %}">
+                            <fieldset role="group">
+                                <input type="text" name="moderator_roles[]" value="{% $config->value %}">
+                                <button class="delete pico-background-red-500">Delete</button>
+                                <button class="update pico-background-green-300">Update</button>
+                            </fieldset>
                             {% endif %}
                         {% endforeach %}
                     </label>
