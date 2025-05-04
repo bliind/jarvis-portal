@@ -56,9 +56,17 @@ class DiscordController extends Controller
         }
 
         $configs = $this->configDatabase->select();
+        $pageConfigs = [];
+        foreach ($configs as $row) {
+            if (!isset($pageConfigs[$row->key])) {
+                $pageConfigs[$row->key] = [];
+            }
+            $pageConfigs[$row->key][] = $row->value;
+        }
+
         $pageData = [
             'title' => 'Dashboard',
-            'configs' => $configs,
+            'configs' => $pageConfigs,
         ];
         return $this->render('dashboard/dashboard.tpl', $pageData);
     }
