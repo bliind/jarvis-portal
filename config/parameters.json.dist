@@ -1,3 +1,4 @@
 {
-    "allowed_users": []
+    "allowed_users": [],
+    "config_dsn": ""
 }
