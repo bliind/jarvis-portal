@@ -25,7 +25,7 @@
                     <label>
                         Caps Protection Percentage
                         <fieldset role="group">
-                            <input type="text" name="caps_prot_percent" value="{% $configs['caps_prot_percent'] %}">
+                            <input type="text" name="caps_prot_percent" value="{% $configs['caps_prot_percent'][0] %}">
                             <button class="delete pico-background-red-500">Delete</button>
                             <button class="update pico-background-green-300">Update</button>
                         </fieldset>
