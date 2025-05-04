@@ -10,13 +10,18 @@
 
     <div class="row">
         <div class="col">
-            <h3>Oh, you don't believe me?</h3>
-            <p>Here's a little taste...</p>
-            <ul>
-                {% foreach ($configs as $config): %}
-                <li>{% $config->key %} = {% $config->value %}</li>
-                {% endforeach %}
-            </ul>
+            <form>
+                <fieldset>
+                    <label>
+                        Moderator Roles
+                        {% foreach ($configs as $config): %}
+                            {% if ($config->key == 'moderator_roles'): %}
+                            <input type="text" name="moderator_roles[]" value="{% $config->value %}">
+                            {% endif %}
+                        {% endforeach %}
+                    </label>
+                </fieldset>
+            </form>
         </div>
     </div>
 </div>
