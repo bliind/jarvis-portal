@@ -98,7 +98,7 @@ class Yaml
      * @param  string $file path of yaml file
      * @return array        yaml parsed result
      */
-    public static function load($file)
+    public function load($file)
     {
         return $this->loadWithSource($this->loadFromFile($file));
     }
@@ -109,7 +109,7 @@ class Yaml
      * @param  string $yamlContent string conatining yaml content
      * @return array               yaml parsed result
      */
-    public static function loadString($yamlContent)
+    public function loadString($yamlContent)
     {
         return $this->loadWithSource($this->loadFromString($yamlContent));
     }
