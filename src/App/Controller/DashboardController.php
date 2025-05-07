@@ -42,7 +42,9 @@ class DashboardController extends Controller
 
     public function dashboardAction()
     {
-        $pageData = [];
+        $pageData = [
+            'title' => 'Select'
+        ];
         return $this->render('dashboard/landing.tpl', $pageData);
     }
 
