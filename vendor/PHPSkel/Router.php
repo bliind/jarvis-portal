@@ -79,13 +79,13 @@ class Router
                 return $assetResponse;
             }
 
-            if (list($action, $params) = $this->findAction($uri)) {
-                $split = explode(':', $action);
+            if ($route = $this->findAction($uri)) {
+                $split = explode(':', $route['action']);
 
                 $controllerClass = 'App\Controller\\' . $split[0] . 'Controller';
 
                 $controller = new $controllerClass($request);
-                return $controller->runAction($split[1], $params);
+                return $controller->runAction($split[1], $route['params']);
             } else {
                 throw new HttpException(null, '404');
             }
