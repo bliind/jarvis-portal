@@ -36,7 +36,7 @@ class Router
         }
 
         foreach ($this->routes as $path => $action) {
-            $re = '@' . preg_replace('/\{\w+\}/', '(.+)', $action) . '@';
+            $re = '@' . preg_replace('/\{\w+\}/', '(.+)', $path) . '@';
             preg_match($re, $uri, $matches);
             if (!empty($matches) && $matches[0] == $uri) {
                 array_shift($matches);
