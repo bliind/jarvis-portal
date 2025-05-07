@@ -2,6 +2,8 @@
 
 namespace PHPSkel;
 
+use Yaml\Yaml;
+
 class Router
 {
     protected $routes;
@@ -16,7 +18,8 @@ class Router
 
     private function makeRoutes()
     {
-        $routeArray = json_decode(file_get_contents($this->rootDir . '/config/routes.json'), true);
+        $routeArray = Yaml::load($this->rootDir . '/config/routes.yml');
+        // $routeArray = json_decode(file_get_contents($this->rootDir . '/config/routes.json'), true);
         foreach ($routeArray as $name => $details) {
             $this->routes[$details['path']] = $details['controller'];
         }
@@ -25,7 +28,22 @@ class Router
     private function findAction($uri)
     {
         if (isset($this->routes[$uri])) {
-            return $this->routes[$uri];
+            return [
+                'action' => $this->routes[$uri],
+                'params' => []
+            ];
+        }
+
+        foreach ($this->routes as $path => $action) {
+            $re = '@' . preg_replace('/\{\w+\}/', '(.+)', $action) . '@';
+            preg_match($re, $uri, $matches);
+            if (!empty($matches) && $matches[0] == $uri) {
+                array_shift($matches);
+                return [
+                    'action' => $action,
+                    'params' => $matches,
+                ];
+            }
         }
 
         return false;
@@ -60,13 +78,13 @@ class Router
                 return $assetResponse;
             }
 
-            if ($action = $this->findAction($uri)) {
+            if (list($action, $params) = $this->findAction($uri)) {
                 $split = explode(':', $action);
 
                 $controllerClass = 'App\Controller\\' . $split[0] . 'Controller';
 
                 $controller = new $controllerClass($request);
-                return $controller->runAction($split[1]);
+                return $controller->runAction($split[1], $params);
             } else {
                 throw new HttpException(null, '404');
             }

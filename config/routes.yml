@@ -1,0 +1,20 @@
+index:
+  path: /jarvis/
+  controller: Index:index
+
+dashboard:
+  path: /jarvis/dashboard
+  controller: Discord:dashboard
+
+discordAuth:
+  path: /jarvis/discord-auth
+  controller: Discord:authPage
+
+postUserData:
+  path: /jarvis/postUserData
+  controller: Discord:postUserData
+
+logout:
+  path: /jarvis/logout
+  controller: Discord:logout
+

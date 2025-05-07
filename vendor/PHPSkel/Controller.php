@@ -15,11 +15,6 @@ class Controller
     // a place to put construct things without overriding construct
     public function construct() {}
 
-    // public function render($template, int $status = 200)
-    // {
-    //     return new Response(file_get_contents(ROOTDIR . '/templates/' . $template));
-    // }
-
     public function render(string $templateName, array $data = [], int $status = 200)
     {
         $template = new Template($templateName);
