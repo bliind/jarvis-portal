@@ -2,8 +2,6 @@
 
 namespace PHPSkel;
 
-use Yaml\Yaml;
-
 class Router
 {
     protected $routes;
@@ -20,7 +18,6 @@ class Router
     {
         $yaml = new Yaml();
         $routeArray = $yaml->load($this->rootDir . '/config/routes.yml');
-        // $routeArray = json_decode(file_get_contents($this->rootDir . '/config/routes.json'), true);
         foreach ($routeArray as $name => $details) {
             $this->routes[$details['path']] = $details['controller'];
         }
