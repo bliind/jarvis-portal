@@ -1,2 +1,3 @@
 config/parameters.json
+config/parameters.yml
 templates/compiled/*

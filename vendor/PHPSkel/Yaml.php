@@ -1,5 +1,6 @@
 <?php
-namespace Yaml;
+
+namespace PHPSkel;
 
 /**
  * Yaml Class
@@ -16,6 +17,9 @@ namespace Yaml;
  * Code subject to the MIT license
  * Copyright (c) 2011 Vladimir Andersen
  * -----------------------------------------------------------------------------
+ *
+ ** This is actually a ripped version of a ripped version of spyc
+ ** they left all the comments in place and i don't wanna remove them either
  *
  * Usage:
  * <code>
@@ -438,7 +442,7 @@ class Yaml
     private function loadFromFile($file)
     {
         if (!file_exists($file)) {
-            throw new Exception("Error: yaml file does not exist: $file");
+            throw new \Exception("Error: yaml file does not exist: $file");
         }
 
         return file($file);
@@ -1210,4 +1214,3 @@ class Yaml
         return $line;
     }
 }
-

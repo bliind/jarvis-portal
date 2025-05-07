@@ -8,7 +8,8 @@ class Parameters
 
     public function __construct()
     {
-        $this->parameters = json_decode(file_get_contents(ROOTDIR . '/config/parameters.json'), true);
+        $yaml = new Yaml();
+        $this->parameters = $yaml->load(ROOTDIR . '/config/parameters.yml');
     }
 
     public function get($parameter, $default = null)
