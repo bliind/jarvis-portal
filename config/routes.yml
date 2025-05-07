@@ -2,10 +2,6 @@ index:
   path: /jarvis/
   controller: Index:index
 
-dashboard:
-  path: /jarvis/dashboard
-  controller: Discord:dashboard
-
 discordAuth:
   path: /jarvis/discord-auth
   controller: Discord:authPage
@@ -18,3 +14,10 @@ logout:
   path: /jarvis/logout
   controller: Discord:logout
 
+dashboard:
+  path: /jarvis/dashboard
+  controller: Dashboard:dashboard
+
+dashboard_server:
+  path: /jarvis/dashboard/server/{server}
+  controller: Dashboard:serverDashboard

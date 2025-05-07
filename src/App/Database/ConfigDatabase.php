@@ -11,4 +11,19 @@ class ConfigDatabase extends Database {
 
         parent::__construct();
     }
+
+    public function getConfigs($server)
+    {
+        $parts = ['where' => 'WHERE server = :server'];
+        $bind = [':server' => (int)$server];
+
+        $rows = $this->select($parts, $bind);
+        $out = [];
+        foreach ($rows as $row) {
+            if (!isset($out[$row->key])) $out[$row->key] = [];
+            $out[$row->key][] = $row->value;
+        }
+
+        return $out;
+    }
 }
