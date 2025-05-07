@@ -12,5 +12,5 @@
 {% endblock %}
 
 {% block "javascript" %}
-    <script src="js/discord-auth.js"></script>
+    <script src="/jarvis/js/discord-auth.js"></script>
 {% endblock %}

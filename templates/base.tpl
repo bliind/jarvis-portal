@@ -34,7 +34,7 @@
     {% endif %}
 
     {% if (!isset($logout)): %}
-    <script src="js/postUserData.js"></script>
+    <script src="/jarvis/js/postUserData.js"></script>
     {% endif %}
     {% block "javascript" %}
     {% endblock %}

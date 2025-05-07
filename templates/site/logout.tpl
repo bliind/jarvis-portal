@@ -10,5 +10,5 @@
 {% endblock %}
 
 {% block "javascript" %}
-    <script src="js/logout.js"></script>
+    <script src="/jarvis/js/logout.js"></script>
 {% endblock %}
