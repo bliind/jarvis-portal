@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JARVIS{% @$title ? ' | ' . $title : '' %}</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/jarvis/favicon.ico">
     {* <link rel="stylesheet" href="https://unpkg.com/chota@latest"> *}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
     <link rel="stylesheet" href="/jarvis/css/style.css">
