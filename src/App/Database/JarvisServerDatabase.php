@@ -12,10 +12,10 @@ class JarvisServerDatabase extends Database {
         parent::__construct();
     }
 
-    public function getServer($server)
+    public function getServer($serverID)
     {
-        $parts = ['where' => 'WHERE server = :server'];
-        $bind = [':server' => (int)$server];
+        $parts = ['where' => 'WHERE server_id = :serverID'];
+        $bind = [':serverID' => (int)$serverID];
 
         return $this->select($parts, $bind);
     }
