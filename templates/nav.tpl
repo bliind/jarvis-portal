@@ -5,7 +5,6 @@
             <li><a class="brand" href="#">JARVIS</a></li>
             <li><a href="/jarvis/"{% $uri == '/jarvis/' ? ' class="active"' : '' %}>Home</a></li>
             <li><a href="/jarvis/dashboard"{% $uri == '/jarvis/dashboard' ? ' class="active"' : '' %}>Dashboard</a></li>
-            <li><a href="/jarvis/404"{% $uri == '/jarvis/404' ? ' class="active"' : '' %}>404</a></li>
         </ul>
         {% if (isset($user)): %}
             <ul class="nav-right">
