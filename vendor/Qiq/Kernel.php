@@ -24,7 +24,7 @@ abstract class Kernel implements Engine
             : new Compiler\QiqCompiler($cachePath);
 
         $catalog = new Catalog((array) $paths, $extension, $compiler);
-        $helpers ??= new HtmlHelpers();
+        if (!is_null($helpers)) $helpers = new HtmlHelpers();
         return new static($catalog, $helpers);
     }
 
