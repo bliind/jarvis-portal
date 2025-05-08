@@ -12,7 +12,7 @@
             <select name="server" id="server">
                 <option value="" hidden selected>Select one</option>
                 {% foreach ($servers as $server): %}
-                    <option value="{% $server['id'] %}">{% $server['name'] %}</option>
+                    <option value="{% $server->id %}">{% $server->name %}</option>
                 {% endforeach %}
             </select>
         </div>
