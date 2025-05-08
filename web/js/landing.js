@@ -5,7 +5,7 @@
         const serverBox = document.querySelector('#server');
         serverBox.addEventListener('change', event => {
             const url = `${window.location.protocol}//${window.location.host}/jarvis/dashboard/${serverBox.value}`;
-            location.href.replace(url);
+            window.location.replace(url);
         });
     }
 
