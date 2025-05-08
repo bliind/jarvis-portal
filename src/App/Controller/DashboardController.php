@@ -48,7 +48,7 @@ class DashboardController extends Controller
     {
         $pageData = [
             'title' => 'Select',
-            'servers' => $this->jarvisDatabase->select(),
+            'servers' => $this->jarvisDatabase->getServers(),
         ];
 
         return $this->render('dashboard/landing.tpl', $pageData);
@@ -56,11 +56,9 @@ class DashboardController extends Controller
 
     public function serverDashboardAction($server)
     {
-        $configs = $this->configDatabase->getConfigs($server);
-
         $pageData = [
             'title' => 'Dashboard',
-            'configs' => $configs,
+            'configs' => $this->configDatabase->getConfigs($server),
         ];
 
         return $this->render('dashboard/serverDashboard.tpl', $pageData);
