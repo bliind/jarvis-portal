@@ -6,11 +6,13 @@ class Controller
 {
     protected $request;
     protected $requiresAuth = false;
+    private $__template;
 
     public function __construct(Request $request)
     {
         $this->request = $request;
         $this->construct();
+        $this->__template = \Qiq\Template::new('qiq-templates');
     }
 
     // a place to put construct things without overriding construct
@@ -24,7 +26,7 @@ class Controller
 
     public function render(string $templateName, array $data = [], int $status = 200)
     {
-        $template = new Template($templateName);
+        // $template = new Template($templateName);
 
         $data['request'] = $this->request;
         if (isset($_SESSION['discordID'])) {
@@ -35,8 +37,12 @@ class Controller
                 'avatar'      => $_SESSION['avatar'],
             ];
         }
+        $this->__template->setView($templateName);
+        $this->__template->setData($data);
 
-        return new Response($template->render($data), $status);
+        return new Response($this->__template(), $status);
+
+        // return new Response($template->render($data), $status);
     }
 
     public function runAction($action, $parameters = [])

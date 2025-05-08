@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JARVIS | {{ setBlock ('title') }}Main{{= getBlock () ~}}</title>
+    <link rel="icon" type="image/x-icon" href="/jarvis/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/jarvis/css/style.css">
+    {{ setBlock ('stylesheets') }}
+    {{= getBlock () ~}}
+</head>
+<body>
+    {{ include "nav.tpl" }}
+    {{ setBlock ('body') }}
+    {{= getBlock () ~}}
+
+    <script>
+        if (window.matchMedia &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+        }
+    </script>
+
+    {{ if (isset($user)): }}
+    <script>
+        const user = {
+            {{ foreach ($user as $key => $value): }}
+            "{{= $key }}": "{{= $value }}",
+            {{ endforeach }}
+        }
+    </script>
+    {{ endif }}
+
+    {{ if (!isset($logout)): }}
+    <script src="/jarvis/js/postUserData.js"></script>
+    {{ endif }}
+
+    {{ setBlock ('javascript') }}
+    {{= getBlock () ~}}
+</body>
+</html>
