@@ -7,6 +7,7 @@
     <link rel="icon" type="image/x-icon" href="/jarvis/favicon.ico">
     {* <link rel="stylesheet" href="https://unpkg.com/chota@latest"> *}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet" />
     <link rel="stylesheet" href="/jarvis/css/style.css">
     {% block "stylesheets" %}
     {% endblock %}

@@ -51,3 +51,11 @@ body.dark {
 .rounded {
     border-radius: 5px;
 }
+
+.button-del {
+    background-color: var(--pico-del-color);
+}
+
+.button-upd {
+    background-color: var(--pico-ins-color);
+}

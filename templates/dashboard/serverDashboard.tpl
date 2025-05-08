@@ -13,40 +13,7 @@
     </div>
 
     <div class="row">
-        <div class="col">
-            <form>
-                <fieldset>
-                    <label>
-                        Moderator Roles
-                        {% foreach ($configs['moderator_roles'] as $role): %}
-                            <fieldset role="group">
-                                <input type="text" name="moderator_roles[]" value="{% $role %}">
-                                <button class="delete pico-background-red-500">Delete</button>
-                                <button class="update pico-background-green-300">Update</button>
-                            </fieldset>
-                        {% endforeach %}
-                    </label>
-                    <label>
-                        Caps Protection Percentage
-                        <fieldset role="group">
-                            <input type="text" name="caps_prot_percent" value="{% $configs['caps_prot_percent'][0] %}">
-                            <button class="delete pico-background-red-500">Delete</button>
-                            <button class="update pico-background-green-300">Update</button>
-                        </fieldset>
-                    </label>
-                    <label>
-                        Caps Protection Immune Channels
-                        {% foreach ($configs['caps_prot_immune_channels'] as $channel): %}
-                            <fieldset role="group">
-                                <input type="text" name="caps_prot_immune_channels[]" value="{% $channel %}">
-                                <button class="delete pico-background-red-500">Delete</button>
-                                <button class="update pico-background-green-300">Update</button>
-                            </fieldset>
-                        {% endforeach %}
-                    </label>
-                </fieldset>
-            </form>
-        </div>
+        {% include "dashboard/cogs/misc.tpl" %}
     </div>
 </div>
 {% endblock %}
