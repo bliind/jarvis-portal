@@ -17,6 +17,6 @@ class JarvisServerDatabase extends Database {
         $parts = ['where' => 'WHERE server_id = :serverID'];
         $bind = [':serverID' => (int)$serverID];
 
-        return $this->select($parts, $bind);
+        return $this->selectOne($parts, $bind);
     }
 }
