@@ -17,3 +17,7 @@
         </div>
     </div>
 {% endblock %}
+
+{% block "javascript" %}
+    <script src="/jarvis/js/landing.js"></script>
+{% endblock %}

@@ -6,15 +6,19 @@ use PHPSkel\Controller;
 use PHPSkel\HttpException;
 use PHPSkel\Parameters;
 use App\Database\ConfigDatabase;
+use App\Database\JarvisDatabase;
 
 class DashboardController extends Controller
 {
     protected $requiresAuth = true;
     protected $allowedUsers;
+    private $jarvisDatabase;
     private $configDatabase;
 
     public function construct() {
+        $this->jarvisDatabase = new JarvisDatabase();
         $this->configDatabase = new ConfigDatabase();
+
         $parameters = new Parameters();
         $this->allowedUsers = $parameters->get('allowed_users');
     }
@@ -43,8 +47,10 @@ class DashboardController extends Controller
     public function dashboardAction()
     {
         $pageData = [
-            'title' => 'Select'
+            'title' => 'Select',
+            'servers' => $this->jarvisDatabase->select(),
         ];
+
         return $this->render('dashboard/landing.tpl', $pageData);
     }
 

@@ -6,16 +6,20 @@ class DiscordService
 {
     private $baseUrl = 'https://discord.com/api';
 
-    public function __construct()
-    {
-
-    }
-
     public function getGuilds($token)
     {
-        $output = $this->curl($token, '/users/@me/guilds');
+        $response = $this->curl($token, '/users/@me/guilds');
 
-        return $output['response'];
+        $out = [];
+        foreach ($response['response'] as $guild) {
+            $out[] = [
+                "id" => $guild['id'],
+                "name" => $guild['name'],
+                "icon" => $guild['icon'],
+            ];
+        }
+
+        return $out;
     }
 
     private function curl($token, $endpoint, $method = 'GET', $parameters = [])

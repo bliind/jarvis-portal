@@ -19,5 +19,5 @@ dashboard:
   controller: Dashboard:dashboard
 
 dashboard_server:
-  path: /jarvis/dashboard/server/{server}
+  path: /jarvis/dashboard/{server}
   controller: Dashboard:serverDashboard
