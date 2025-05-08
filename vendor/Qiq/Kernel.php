@@ -13,11 +13,11 @@ abstract class Kernel implements Engine
      * @param string|string[] $paths
      */
     public static function new(
-        string|array $paths = [],
+        $paths = [],
         string $extension = '.php',
-        null|string|false $cachePath = null,
-        ?Helpers $helpers = null,
-    ) : static
+        $cachePath = null,
+        $helpers = null
+    )
     {
         $compiler = $cachePath === false
             ? new Compiler\NonCompiler()
@@ -45,7 +45,7 @@ abstract class Kernel implements Engine
 
     private ?string $view = null;
 
-    public function __construct(private Catalog $catalog, private Helpers $helpers)
+    public function __construct(Catalog $catalog, Helpers $helpers)
     {
         $this->blocks = new Blocks();
         $this->renderStack = new RenderStack();
@@ -109,7 +109,7 @@ abstract class Kernel implements Engine
     }
 
     /** @inheritdoc */
-    public function setData(array|stdClass $data) : void
+    public function setData($data) : void
     {
         $this->data = (array) $data;
     }
