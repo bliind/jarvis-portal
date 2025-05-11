@@ -155,6 +155,21 @@ textarea {
     color: var(--grey1);
 }
 
+.select {
+    position: relative;
+    display: flex;
+    background: inherit;
+    overflow: hidden;
+}
+.select::after {
+    display: block;
+    content: '\25BC';
+    position: absolute;
+    top: 0.75em;
+    right: 0.5em;
+    padding: 0 1em;
+}
+
 .bg-blue {
     background-color: var(--blue3);
     color: var(--grey1);
