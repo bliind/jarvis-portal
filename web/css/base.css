@@ -259,7 +259,6 @@ nav ul>li:not(.brand):hover {
 
     .hamburger .menu {
         width: 50%;
-        margin-left: -1em;
         background-color: #121212;
         position: absolute;
         transform: scaleY(0);
