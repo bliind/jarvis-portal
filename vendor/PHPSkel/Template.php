@@ -211,8 +211,11 @@ class Template
         $includeTemplate = $this->getSplitTemplate($template);
         $includeBlocks = $this->makeBlocks($includeTemplate, []);
         if (!empty($blockChain)) {
+            // if we are inside a block, as made evident by the existence of an element inside $blockChain,
+            // merge the $includeBlocks with that specific $block
             $blocks[end($blockChain)] = array_merge($blocks[end($blockChain)], $includeBlocks);
         } else {
+            // or else we just merge to the end of $blocks
             $blocks = array_merge($blocks, $includeBlocks);
         }
     }
