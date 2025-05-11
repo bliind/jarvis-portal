@@ -1,6 +1,6 @@
 {% $uri = $request->getUri(); %}
 <nav>
-    <div class="container">
+    <div class="container nav-container bg-blue">
         <ul>
             <li class="brand"><a href="#">JARVIS</a></li>
             <li><a href="/jarvis/"{% $uri == '/jarvis/' ? ' class="active"' : '' %}>Home</a></li>

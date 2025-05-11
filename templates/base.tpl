@@ -9,7 +9,7 @@
     {* <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"> *}
     <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet" />
     <link rel="stylesheet" href="/jarvis/css/base.css">
-    <link rel="stylesheet" href="/jarvis/css/style.css">
+    {* <link rel="stylesheet" href="/jarvis/css/style.css"> *}
     {% block "stylesheets" %}
     {% endblock %}
 </head>

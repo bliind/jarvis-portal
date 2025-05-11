@@ -114,6 +114,11 @@ a:visited {color: var(--link-visited)}
     color: var(--grey1);
 }
 
+.bg-blue {
+    background-color: var(--blue3);
+    color: var(--grey1);
+}
+
 .row {
     width: 100%;
     grid-column: 1 / -1;
@@ -206,6 +211,11 @@ nav ul>li:not(.brand):hover {
     background-color: rgba(255, 255, 255, 0.25);
 }
 
+.nav-container {
+    border-radius: 0.5em;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
 
 .hamburger {
     display: none;
@@ -251,6 +261,7 @@ nav ul>li:not(.brand):hover {
     .hamburger .menu ul {
         list-style-type: none;
         width: 100%;
+        margin-inline: 0;
     }
     
     .hamburger .menu ul li {

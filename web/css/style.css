@@ -24,11 +24,6 @@ body.dark {
     font-weight: bold;
 }
 
-.nav {
-    padding-inline: 1rem;
-    margin-bottom: 0.75rem;
-}
-
 .nav li .active {
     color: #FFF;
 }
@@ -41,11 +36,6 @@ body.dark {
 
 .bg-primary {
     background-color: var(--color-primary);
-    --pico-color: var(--bg-color);
-    --pico-primary: var(--bg-color);
-    --pico-form-element-background-color: var(--color-primary);
-    --pico-form-element-placeholder-color: var(--bg-color);
-    --pico-form-element-active-background-color: var(--color-secondary);
 }
 
 .rounded {
