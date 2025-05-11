@@ -166,7 +166,7 @@ textarea {
 nav {
     position: relative;
     display: block;
-    padding: 0.25em 0;
+    padding: 0;
     width: 100%;
     background-color: var(--nav-bg);
 }

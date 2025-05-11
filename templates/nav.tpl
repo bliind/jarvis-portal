@@ -21,7 +21,7 @@
         </li></ul>
         {% endif %}
     </div>
-    <div class="hamburger">
+    <div class="hamburger nav-container bg-blue">
         <input type="checkbox" id="hamburger-button">
         <label for="hamburger-button">
             &#9776;
