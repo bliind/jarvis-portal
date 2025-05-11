@@ -135,6 +135,7 @@ input {
     font-size: inherit;
     font-family: sans-serif;
     background: inherit;
+    color: inherit;
 }
 
 
@@ -144,10 +145,13 @@ button {
     border: 1px solid var(--grey4);
     font-size: inherit;
     font-family: sans-serif;
+    background: inherit;
+    color: inherit;
 }
 
 textarea {
     border: 1px solid var(--grey5);
     font-family: sans-serif;
+    background: inherit;
     color: inherit;
 }
