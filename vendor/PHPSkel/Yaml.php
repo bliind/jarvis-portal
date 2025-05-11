@@ -52,14 +52,6 @@ class Yaml
     public $settingDumpForceQuotes = false;
 
     /**
-     * Setting this to true will forse YAMLLoad to use syck_load function when
-     * possible. False by default.
-     *
-     * @var bool
-     */
-    public $settingUseSyckIsPossible = false;
-
-    /**
      * Private vars.
      * @var mixed
      */
@@ -365,11 +357,6 @@ class Yaml
     {
         if (empty ($Source)) {
             return array();
-        }
-        if ($this->settingUseSyckIsPossible && function_exists ('syck_load')) {
-            $array = syck_load (implode ('', $Source));
-
-            return is_array($array) ? $array : array();
         }
 
         $this->path = array();
