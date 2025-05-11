@@ -101,33 +101,6 @@ a, a:link {color: var(--link)}
 a:hover {color: var(--link-hover)}
 a:visited {color: var(--link-visited)}
 
-.center {text-align: center}
-.hidden {display: none}
-
-.container {
-    display: grid;
-    width: 80%;
-    margin: 0 auto;
-    padding: 0.5em 1em;
-    grid-template-columns: repeat(auto-fit, minmax(5em, 1fr));
-    background-color: var(--grey12);
-    color: var(--grey1);
-}
-
-.bg-blue {
-    background-color: var(--blue3);
-    color: var(--grey1);
-}
-
-.row {
-    width: 100%;
-    grid-column: 1 / -1;
-}
-
-.group {
-    margin: 0.5em;
-    padding: 0.25em;
-}
 
 label {
     display: block;
@@ -163,6 +136,38 @@ textarea {
     color: inherit;
 }
 
+
+/** classes */
+
+.center {text-align: center}
+.hidden {display: none}
+
+.container {
+    display: grid;
+    width: 80%;
+    margin: 0 auto;
+    padding: 0.5em 1em;
+    grid-template-columns: repeat(auto-fit, minmax(5em, 1fr));
+    background-color: var(--grey12);
+    color: var(--grey1);
+}
+
+.bg-blue {
+    background-color: var(--blue3);
+    color: var(--grey1);
+}
+
+.row {
+    width: 100%;
+    grid-column: 1 / -1;
+}
+
+.group {
+    margin: 0.5em;
+    padding: 0.25em;
+}
+
+/* nav */
 nav {
     position: relative;
     display: block;
@@ -228,12 +233,15 @@ nav ul>li:not(.brand):hover {
         display: none;
     }
 
+    .nav-container {
+        border-radius: 0;
+    }
+
     .hamburger {
         width: 100%;
         position: relative;
         display: block;
         color: var(--nav-color);
-        margin-left: 1em;
     }
 
     .hamburger label {
