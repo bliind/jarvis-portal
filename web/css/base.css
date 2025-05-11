@@ -290,6 +290,7 @@ nav ul>li:not(.brand):hover {
         transform: scaleY(0);
         transform-origin: top;
         transition: transform 0.25s;
+        margin-top: 24.5%;
     }
 
     .hamburger .menu ul {
