@@ -239,7 +239,7 @@ nav ul>li {
 }
 
 nav ul>li>a {
-    color: inherit;
+    color: inherit !important;
     text-decoration: inherit;
     padding: 1em 0.5em;
     display: block;
