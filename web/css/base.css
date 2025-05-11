@@ -101,6 +101,9 @@ a, a:link {color: var(--link)}
 a:hover {color: var(--link-hover)}
 a:visited {color: var(--link-visited)}
 
+img,svg,video {
+    vertical-align: middle;
+}
 
 label {
     display: block;
