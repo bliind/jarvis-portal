@@ -213,6 +213,7 @@ nav {
     padding: 0;
     width: 100%;
     background-color: var(--nav-bg);
+    color: var(--grey0);
 }
 nav>.container {
     position: relative;
