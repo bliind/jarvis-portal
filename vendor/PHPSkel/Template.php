@@ -210,7 +210,11 @@ class Template
     {
         $includeTemplate = $this->getSplitTemplate($template);
         $includeBlocks = $this->makeBlocks($includeTemplate, []);
-        $blocks = array_merge($blocks, $includeBlocks);
+        if (!empty($blockChain)) {
+            $blocks[end($blockChain)] = array_merge($blocks[end($blockChain)], $includeBlocks);
+        } else {
+            $blocks = array_merge($blocks, $includeBlocks);
+        }
     }
 
     /**
