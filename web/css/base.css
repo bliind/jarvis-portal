@@ -158,9 +158,10 @@ textarea {
 .select {
     position: relative;
     display: flex;
-    background: inherit;
+    background: var(--grey12);
     overflow: hidden;
 }
+.select>select {appearance:none}
 .select::after {
     display: block;
     content: '\25BC';
