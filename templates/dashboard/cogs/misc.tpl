@@ -28,17 +28,21 @@
             </label>
             <label>
                 Caps% of Message to Trigger at
-                {% $name = 'caps_prot_percent'; %}
-                {% $value = $configs['caps_prot_percent'] %}
-                {% $single = true %}
-                {% include "dashboard/elements/input.tpl" %}
+                {% foreach ($configs['caps_prot_percent'] as $percent): %}
+                    {% $name = 'caps_prot_percent'; %}
+                    {% $value = $percent %}
+                    {% $single = true %}
+                    {% include "dashboard/elements/input.tpl" %}
+                {% endforeach %}
             </label>
             <label>
                 Message to Send on Trigger
-                {% $name = 'caps_prot_message'; %}
-                {% $value = $configs['caps_prot_message'] %}
-                {% include "dashboard/elements/input.tpl" %}
-                {% $single = false %}
+                {% foreach ($configs['caps_prot_message'] as $message): %}
+                    {% $name = 'caps_prot_message'; %}
+                    {% $value = $message %}
+                    {% include "dashboard/elements/input.tpl" %}
+                    {% $single = false %}
+                {% endforeach %}
             </label>
         </fieldset>
     </form>
