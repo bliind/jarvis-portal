@@ -167,6 +167,7 @@ nav {
     position: relative;
     display: block;
     padding: 0;
+    margin-bottom: 1em;
     width: 100%;
     background-color: var(--nav-bg);
 }
