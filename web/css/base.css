@@ -108,6 +108,7 @@ a:visited {color: var(--link-visited)}
     display: grid;
     width: 80%;
     margin: 0 auto;
+    padding: 0.5em 1em;
     grid-template-columns: repeat(auto-fit, minmax(5em, 1fr));
     background-color: var(--grey12);
     color: var(--grey1);
