@@ -148,6 +148,7 @@ textarea {
 .container {
     display: grid;
     width: 80%;
+    height: 80%;
     margin: 0 auto;
     padding: 0.5em 1em;
     grid-template-columns: repeat(auto-fit, minmax(5em, 1fr));
@@ -248,6 +249,10 @@ nav ul>li:not(.brand):hover {
 
 /* mobile */
 @media only screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+
     nav>.container {
         display: none;
     }
@@ -259,7 +264,9 @@ nav ul>li:not(.brand):hover {
     .hamburger {
         width: 100%;
         position: relative;
-        display: block;
+        display: grid;
+        height: 3em;
+        align-items: center;
         color: var(--nav-color);
     }
 
