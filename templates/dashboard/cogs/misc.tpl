@@ -1,5 +1,5 @@
 <div class="col">
-    <p>Caps Protection</p>
+    <h2>Caps Protection</h2>
     <form>
         <fieldset>
             <label>
