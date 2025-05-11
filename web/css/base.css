@@ -138,7 +138,6 @@ input {
     color: inherit;
 }
 
-
 button {
     padding: 0.25em 0.4em;
     border-radius: 4px;
@@ -154,4 +153,53 @@ textarea {
     font-family: sans-serif;
     background: inherit;
     color: inherit;
+}
+
+
+nav {
+    position: relative;
+    display: block;
+    padding: 0.25em 0;
+    width: 100%;
+    background-color: var(--nav-bg);
+}
+nav>.container {
+    position: relative;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(2em, 1fr))
+}
+
+nav ul {
+    list-style-type: none;
+    display: inline-block;
+    align-items: center;
+}
+nav ul:nth-of-type(2) {
+    justify-self: end;
+}
+
+nav ul>li {
+    display: inline-block;
+    color: var(--nav-color);
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+nav ul>li>a {
+    color: inherit;
+    text-decoration: inherit;
+    padding: 1em 0.5em;
+    display: block;
+}
+
+nav ul>li.brand {
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-right: 0.5em;
+}
+
+nav ul>li:not(.brand):hover {
+    background-color: rgba(255, 255, 255, 0.25);
 }
