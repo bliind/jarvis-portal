@@ -27,6 +27,31 @@ input[type=number] {
     --link: #11779c;
     --link-hover: #a51515;
     --link-visited: #7c2fbb;
+
+    --grey0: #000000;
+    --grey1: #121212;
+    --grey2: #232323;
+    --grey3: #454545;
+    --grey4: #565656;
+    --grey5: #676767;
+    --grey6: #787878;
+    --grey7: #898989;
+    --grey8: #9A9A9A;
+    --grey9: #ABABAB;
+    --grey10: #BCBCBC;
+    --grey11: #CDCDCD;
+    --grey12: #DEDEDE;
+    --grey13: #EFEFEF;
+    --grey14: #FFFFFF;
+    --green: #AAFFAA;
+    --green2: #66CC66;
+    --green3: #339933;
+    --blue: #66AAFF;
+    --blue2: #3388CC;
+    --blue3: #005599;
+    --red: #FFAAAA;
+    --red2: #CC6666;
+    --red3: #993333;
 }
 @media (prefers-color-scheme: dark) {
     /* dark mode */
@@ -37,6 +62,31 @@ input[type=number] {
         --link: #46cafa;
         --link-hover: #fc3a3a;
         --link-visited: #7c46fa;
+
+        --grey14: #000000;
+        --grey13: #121212;
+        --grey12: #232323;
+        --grey11: #454545;
+        --grey10: #565656;
+        --grey9: #676767;
+        --grey8: #787878;
+        --grey7: #898989;
+        --grey6: #9A9A9A;
+        --grey5: #ABABAB;
+        --grey4: #BCBCBC;
+        --grey3: #CDCDCD;
+        --grey2: #DEDEDE;
+        --grey1: #EFEFEF;
+        --grey0: #FFFFFF;
+        --green3: #AAFFAA;
+        --green2: #66CC66;
+        --green: #339933;
+        --blue3: #66AAFF;
+        --blue2: #3388CC;
+        --blue: #005599;
+        --red3: #FFAAAA;
+        --red2: #CC6666;
+        --red: #993333;
     }
 }
 body {
@@ -50,3 +100,51 @@ body {
 a, a:link {color: var(--link)}
 a:hover {color: var(--link-hover)}
 a:visited {color: var(--link-visited)}
+
+.center {text-align: center}
+.hidden {display: none}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(5em, 1fr));
+    background-color: var(--grey12);
+    color: var(--grey1);
+}
+
+.row {width: 100%}
+
+.group {
+    margin: 0.5em;
+    padding: 0.25em;
+}
+
+label {
+    display: block;
+    font-weight: 500;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 0.25em 0.4em;
+    border-radius: 4px;
+    border: 1px solid var(--grey5);
+    font-size: inherit;
+    font-family: sans-serif;
+    background: inherit;
+}
+
+
+button {
+    padding: 0.25em 0.4em;
+    border-radius: 4px;
+    border: 1px solid var(--grey4);
+    font-size: inherit;
+    font-family: sans-serif;
+}
+
+textarea {
+    border: 1px solid var(--grey5);
+    font-family: sans-serif;
+    color: inherit;
+}
