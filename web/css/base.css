@@ -150,6 +150,7 @@ summary {
     line-height: 1.4rem;
     padding-left: 0.5rem;
     margin-bottom: 0.75rem;
+    color: var(--blue3);
 }
 summary:after {
     display: inline-block;
