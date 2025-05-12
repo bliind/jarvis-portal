@@ -20,80 +20,7 @@ input[type=number] {
     -moz-appearance: textfield;
     appearance: textfield;
 }
-:root {
-    --bg: #ababab;
-    --text: #1c1c1c;
-    --bgimg: url('data:image/gif;base64,R0lGODlhCAAIAKIAAAAAAP///+Pj48fHx6urq////wAAAAAAACH5BAEAAAUALAAAAAAIAAgAAAMQODKkvA0O5mKkq1YpMb5XAgA7');
-    --link: #11779c;
-    --link-hover: #a51515;
-    --link-visited: #7c2fbb;
 
-    --grey0: #000000;
-    --grey1: #121212;
-    --grey2: #232323;
-    --grey3: #454545;
-    --grey4: #565656;
-    --grey5: #676767;
-    --grey6: #787878;
-    --grey7: #898989;
-    --grey8: #9A9A9A;
-    --grey9: #ABABAB;
-    --grey10: #BCBCBC;
-    --grey11: #CDCDCD;
-    --grey12: #DEDEDE;
-    --grey13: #EFEFEF;
-    --grey14: #FFFFFF;
-    --green: #AAFFAA;
-    --green2: #66CC66;
-    --green3: #339933;
-    --blue: #66AAFF;
-    --blue2: #3388CC;
-    --blue3: #005599;
-    --red: #FFAAAA;
-    --red2: #CC6666;
-    --red3: #993333;
-
-    --arrow-up: '\25B2';
-    --arrow-down: '\25BC';
-    --arrow-left: '\25C0';
-    --arrow-right: '\25B6';
-}
-@media (prefers-color-scheme: dark) {
-    /* dark mode */
-    :root {
-        --bg: #1c1c1c;
-        --text: #e3e3e3;
-        --bgimg: url('data:image/gif;base64,R0lGODlhCAAIAKIAAAAAAP///1RUVDg4OBwcHP///wAAAAAAACH5BAEAAAUALAAAAAAIAAgAAAMQODSivA0O5mKkq1YpMb5XAgA7');
-        --link: #46cafa;
-        --link-hover: #fc3a3a;
-        --link-visited: #7c46fa;
-
-        --grey14: #000000;
-        --grey13: #121212;
-        --grey12: #232323;
-        --grey11: #454545;
-        --grey10: #565656;
-        --grey9: #676767;
-        --grey8: #787878;
-        --grey7: #898989;
-        --grey6: #9A9A9A;
-        --grey5: #ABABAB;
-        --grey4: #BCBCBC;
-        --grey3: #CDCDCD;
-        --grey2: #DEDEDE;
-        --grey1: #EFEFEF;
-        --grey0: #FFFFFF;
-        --green3: #AAFFAA;
-        --green2: #66CC66;
-        --green: #339933;
-        --blue3: #66AAFF;
-        --blue2: #3388CC;
-        --blue: #005599;
-        --red3: #FFAAAA;
-        --red2: #CC6666;
-        --red: #993333;
-    }
-}
 body {
     background: var(--bg);
     background-image: var(--bgimg);
@@ -102,9 +29,17 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-a, a:link {color: var(--link)}
-a:hover {color: var(--link-hover)}
-a:visited {color: var(--link-visited)}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: calc(100% - 5em);
+    margin: 0 auto;
+    padding: 0.5em 1em;
+    background-color: var(--grey12);
+    color: var(--grey1);
+}
 
 img,svg,video {
     vertical-align: middle;
@@ -161,24 +96,6 @@ details[open] summary:after {
     content: var(--arrow-down);
 }
 
-/** classes */
-
-.center {text-align: center}
-.hidden {display: none}
-.pos-abs {position: absolute}
-.pos-rel {position: relative}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    height: calc(100% - 5em);
-    margin: 0 auto;
-    padding: 0.5em 1em;
-    background-color: var(--grey12);
-    color: var(--grey1);
-}
-
 .select {
     position: relative;
     display: flex;
@@ -194,60 +111,6 @@ details[open] summary:after {
     right: 0.5em;
     padding: 0 1em;
 }
-
-.bg-red {
-    background-color: var(--red3);
-    color: var(--grey14);
-}
-.bg-green {
-    background-color: var(--green3);
-    color: var(--grey14);
-}
-.bg-blue {
-    background-color: var(--blue3);
-    color: var(--grey14);
-}
-
-.btn-red {
-    background-color: var(--red);
-    color: var(--grey0);
-}
-.btn-green {
-    background-color: var(--green);
-    color: var(--grey0);
-}
-.btn-blue {
-    background-color: var(--blue);
-    color: var(--grey0);
-}
-
-.row {
-    width: 100%;
-    grid-column: 1 / -1;
-}
-
-.group {
-    margin: 0.5em;
-    padding: 0.25em;
-}
-
-.btn-group {
-    display: flex;
-}
-.btn-group>* {
-    border-radius: 0;
-    border-right-width: 0;
-}
-.btn-group>*:first-child {
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-}
-.btn-group>*:last-child {
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-right-width: 1px;
-}
-
 
 /* nav */
 nav {
