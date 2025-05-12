@@ -10,7 +10,7 @@
         {% if (isset($user)): %}
         <ul class="pos-abs" style="right:1rem;top:1.1rem;"><li>
             <details class="dropdown">
-                <summary class="bg-primary">
+                <summary class="bg-blue">
                     <img src="https://cdn.discordapp.com/avatars/{% $user['discordID'] %}/{% $user['avatar'] %}.png" width="40" height="40">
                     {% $user['global_name'] %}
                 </summary>
