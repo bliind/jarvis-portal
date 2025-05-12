@@ -2,6 +2,10 @@ index:
   path: /jarvis/
   controller: Index:index
 
+style:
+  path: /jarvis/style
+  controller: Index:style
+
 discordAuth:
   path: /jarvis/discord-auth
   controller: Discord:authPage
