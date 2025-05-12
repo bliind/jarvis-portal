@@ -305,9 +305,6 @@ nav details {
     background-color: var(--blue3);
     align-self: baseline;
 }
-nav details[open] {
-    padding-top: 3.4rem;
-}
 
 .hamburger {
     display: none;
