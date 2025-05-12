@@ -1,5 +1,17 @@
 <div class="col">
     <details name="configs">
+        <summary>Auto Publish</summary>
+        <label class="group">
+            Channels to Auto-Publish
+            {% foreach ($configs['auto_publish_channels'] as $channel): %}
+                {% $name = 'auto_publish_channels'; %}
+                {% $value = $channel %}
+                {% include "dashboard/elements/input.tpl" %}
+            {% endforeach %}
+        </label>
+    </details>
+
+    <details name="configs">
         <summary>Caps Protection</summary>
         <label class="group">
             Moderator Roles (Immune)
@@ -44,22 +56,4 @@
             {% endforeach %}
         </label>
     </details>
-    <hr>
-    <details name="configs">
-        <summary>Auto Publish</summary>
-        <label class="group">
-            Channels to Auto-Publish
-            {% foreach ($configs['auto_publish_channels'] as $channel): %}
-                {% $name = 'auto_publish_channels'; %}
-                {% $value = $channel %}
-                {% include "dashboard/elements/input.tpl" %}
-            {% endforeach %}
-        </label>
-    </details>
 </div>
-{* moderator_roles *}
-{* caps_prot_immune_channels *}
-{* caps_prot_immune_roles *}
-{* caps_prot_message *}
-{* caps_prot_percent *}
-{* auto_publish_channels *}
