@@ -1,7 +1,7 @@
 <div class="col">
     <details name="configs">
         <summary>Caps Protection</summary>
-        <label>
+        <label class="group">
             Moderator Roles (Immune)
             {% foreach ($configs['moderator_roles'] as $role): %}
                 {% $name = 'moderator_roles'; %}
@@ -9,7 +9,7 @@
                 {% include "dashboard/elements/input.tpl" %}
             {% endforeach %}
         </label>
-        <label>
+        <label class="group">
             Immune Channels
             {% foreach ($configs['caps_prot_immune_channels'] as $channel): %}
                 {% $name = 'caps_prot_immune_channels'; %}
@@ -17,7 +17,7 @@
                 {% include "dashboard/elements/input.tpl" %}
             {% endforeach %}
         </label>
-        <label>
+        <label class="group">
             Immune Roles
             {% foreach ($configs['caps_prot_immune_roles'] as $role): %}
                 {% $name = 'caps_prot_immune_roles'; %}
@@ -25,7 +25,7 @@
                 {% include "dashboard/elements/input.tpl" %}
             {% endforeach %}
         </label>
-        <label>
+        <label class="group">
             Caps% of Message to Trigger at
             {% foreach ($configs['caps_prot_percent'] as $percent): %}
                 {% $name = 'caps_prot_percent'; %}
@@ -34,7 +34,7 @@
                 {% include "dashboard/elements/input.tpl" %}
             {% endforeach %}
         </label>
-        <label>
+        <label class="group">
             Message to Send on Trigger
             {% foreach ($configs['caps_prot_message'] as $message): %}
                 {% $name = 'caps_prot_message'; %}
@@ -47,7 +47,7 @@
     <hr>
     <details name="configs">
         <summary>Auto Publish</summary>
-        <label>
+        <label class="group">
             Channels to Auto-Publish
             {% foreach ($configs['auto_publish_channels'] as $channel): %}
                 {% $name = 'auto_publish_channels'; %}
