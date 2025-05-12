@@ -6,7 +6,7 @@
             <h1>Sign in with Discord</h1>
             <p>Your login has expired.</p>
             <center>
-            <a class="button outline" href="https://discord.com/oauth2/authorize?client_id=1099168660871983166&response_type=code&redirect_uri=https%3A%2F%2Fsween.me%2Fjarvis%2Fdiscord-auth&scope=identify+guilds">
+            <a class="button outline" href="https://discord.com/oauth2/authorize?client_id=1099168660871983166&response_type=token&redirect_uri=https%3A%2F%2Fsween.me%2Fjarvis%2Fdiscord-auth&scope=identify+guilds">
             <img src="img/login.png" alt="Login with Discord">
             </a>
             </center>

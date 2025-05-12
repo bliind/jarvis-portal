@@ -14,7 +14,7 @@
             {% if (isset($user)): %}
             <p><a href="/jarvis/dashboard">Go to the Dashboard</a></p>
             {% else: %}
-            <p>Have a server with JARVIS? <a href="https://discord.com/oauth2/authorize?client_id=1099168660871983166&response_type=code&redirect_uri=https%3A%2F%2Fsween.me%2Fjarvis%2Fdiscord-auth&scope=identify+guilds">Login with Discord</a> to get started.</p>
+            <p>Have a server with JARVIS? <a href="https://discord.com/oauth2/authorize?client_id=1099168660871983166&response_type=token&redirect_uri=https%3A%2F%2Fsween.me%2Fjarvis%2Fdiscord-auth&scope=identify+guilds">Login with Discord</a> to get started.</p>
             {% endif %}
         </div>
     </div>
