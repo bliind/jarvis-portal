@@ -77,28 +77,3 @@ a, a:link {color: var(--link)}
 a:hover {color: var(--link-hover)}
 a:visited {color: var(--link-visited)}
 
-.bg-red {
-    background-color: var(--red3);
-    color: var(--grey14);
-}
-.bg-green {
-    background-color: var(--green3);
-    color: var(--grey14);
-}
-.bg-blue {
-    background-color: var(--blue3);
-    color: var(--grey14);
-}
-
-.btn-red {
-    background-color: var(--red);
-    color: var(--grey0);
-}
-.btn-green {
-    background-color: var(--green);
-    color: var(--grey0);
-}
-.btn-blue {
-    background-color: var(--blue);
-    color: var(--grey0);
-}
