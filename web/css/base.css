@@ -52,6 +52,11 @@ input[type=number] {
     --red: #FFAAAA;
     --red2: #CC6666;
     --red3: #993333;
+
+    --arrow-up: '\25B2';
+    --arrow-down: '\25BC';
+    --arrow-left: '\25C0';
+    --arrow-right: '\25B6';
 }
 @media (prefers-color-scheme: dark) {
     /* dark mode */
@@ -148,11 +153,11 @@ summary {
 }
 summary:after {
     display: inline-block;
-    content: '\25C0';
+    content: var(--arrow-right);
     margin-left: 0.5rem;
 }
 details[open] summary:after {
-    content: '\25BC';
+    content: var(--arrow-down);
 }
 
 /** classes */
