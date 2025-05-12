@@ -3,6 +3,9 @@ html,body {height:100%}
 h1,h2,h3,h4,h5,h6 {margin: 1em 0}
 p {margin: 1em 0;}
 a,a:link,a:visited {text-decoration: none}
+a, a:link {color: var(--link)}
+a:hover {color: var(--link-hover)}
+a:visited {color: var(--link-visited)}
 a:hover {text-decoration: underline}
 ul,ol {margin-left: 1em}
 hr {
