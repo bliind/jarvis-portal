@@ -1,6 +1,6 @@
 *{padding:0;margin:0;box-sizing:border-box}
 html,body {height:100%}
-h1,h2,h3,h4,h5,h6 {margin: 1em 0}
+h1,h2,h3,h4,h5,h6 {margin: 0.6em 0}
 p {margin: 1em 0;}
 a,a:link,a:visited {text-decoration: none}
 a, a:link {color: var(--link)}
