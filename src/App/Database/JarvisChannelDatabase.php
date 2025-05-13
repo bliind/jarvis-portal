@@ -3,16 +3,6 @@
 namespace App\Database;
 use PHPSkel\Parameters;
 
-function sortChannels($a, $b)
-{
-    if ($a->channel_position > $b->channel_position) {
-        return 1;
-    } elseif ($a->channel_position < $b->channel_position) {
-        return -1;
-    }
-    return 0;
-}
-
 class JarvisChannelDatabase extends Database {
     public function __construct() {
         $parameters = new Parameters();
@@ -20,6 +10,16 @@ class JarvisChannelDatabase extends Database {
         $this->table = 'channels';
 
         parent::__construct();
+    }
+
+    public function sortChannels($a, $b)
+    {
+        if ($a->channel_position > $b->channel_position) {
+            return 1;
+        } elseif ($a->channel_position < $b->channel_position) {
+            return -1;
+        }
+        return 0;
     }
 
     public function getChannels($server)
