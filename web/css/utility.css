@@ -85,6 +85,7 @@
     border-radius: 0.5em;
     position: relative;
     cursor: pointer;
+    text-shadow: 0 0 3px black;
 }
 .existing-option:hover:after {
     content: 'x';
