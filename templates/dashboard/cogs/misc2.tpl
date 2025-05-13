@@ -4,7 +4,7 @@
         <div class="option-group group" data-key="moderator_roles">
             {% $skip = []; %}
             {% foreach ($configs['moderator_roles'] as $role): %}
-            <span class="existing-option" data-value="{% $role->role_id %}">{% $role->role_name %}</span>
+            <span class="existing-option" data-value="{% $role->value %}">{% $role->role_name %}</span>
             {% $skip[] = $role->role_id; %}
             {% endforeach %}
             {% include "dashboard/elements/roleselect.tpl" %}
@@ -16,7 +16,7 @@
         <div class="option-group group" data-key="developer_roles">
             {% $skip = []; %}
             {% foreach ($configs['developer_roles'] as $role): %}
-            <span class="existing-option" data-value="{% $role->role_id %}">{% $role->role_name %}</span>
+            <span class="existing-option" data-value="{% $role->value %}">{% $role->role_name %}</span>
             {% $skip[] = $role->role_id; %}
             {% endforeach %}
             {% include "dashboard/elements/roleselect.tpl" %}
@@ -28,7 +28,7 @@
         <div class="option-group group" data-key="caps_prot_immune_roles">
             {% $skip = []; %}
             {% foreach ($configs['caps_prot_immune_roles'] as $role): %}
-            <span class="existing-option" data-value="{% $role->role_id %}">{% $role->role_name %}</span>
+            <span class="existing-option" data-value="{% $role->value %}">{% $role->role_name %}</span>
             {% $skip[] = $role->role_id; %}
             {% endforeach %}
             {% include "dashboard/elements/roleselect.tpl" %}
@@ -40,7 +40,7 @@
         <div class="option-group group" data-key="caps_prot_immune_channels">
             {% $skip = []; %}
             {% foreach ($configs['caps_prot_immune_channels'] as $channel): %}
-            <span class="existing-option" data-value="{% $channel->channel_id %}">{% $channel->channel_name %}</span>
+            <span class="existing-option" data-value="{% $channel->value %}">{% $channel->channel_name %}</span>
             {% $skip[] = $channel->channel_id; %}
             {% endforeach %}
             {% include "dashboard/elements/channelselect.tpl" %}
