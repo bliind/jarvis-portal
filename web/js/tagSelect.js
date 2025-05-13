@@ -64,7 +64,7 @@
     }
 
     function saveChanges() {
-        data = createPostData();
+        const data = createPostData();
         console.log(JSON.stringify(data));
         // fetch to endpoint to receive data
     }
