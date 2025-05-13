@@ -1,5 +1,5 @@
 <div class="col">
-    <details open="">
+    <details name="configs" open="">
         <summary class="text-big">Main</summary>
         <div class="group">
             <h3>Moderator Roles</h3>
@@ -12,7 +12,7 @@
         </div>
     </details>
 
-    <details>
+    <details name="configs">
         <summary class="text-big">Team Answers</summary>
         <div class="group">
             <h3>Developer Roles</h3>
@@ -32,7 +32,7 @@
         </div>
     </details>
 
-    <details>
+    <details name="configs">
         <summary class="text-big">Caps Protection</summary>
         <div class="group">
             <h3>Immune Roles</h3>
