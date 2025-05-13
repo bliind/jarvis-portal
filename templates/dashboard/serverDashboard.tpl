@@ -29,6 +29,9 @@
 {% block "javascript" %}
     <script>
         const all_roles = JSON.parse('{% echo(json_encode($roles)); %}');
+        function roleById(roleID) {
+            return all_roles.find(r => r['role_id'] == roleID);
+        }
     </script>
     <script src="/jarvis/js/tagSelect.js"></script>
 {% endblock %}

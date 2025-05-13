@@ -1,6 +1,11 @@
 (function(document) {
     'use strict';
 
+    function padHex(hex) {
+        while (hex.length < 6) hex = '0' + hex;
+        return hex;
+    }
+
     function handleSelectChange(event) {
         const value = event.target.value;
         const label = event.target.options[event.target.selectedIndex].textContent;
@@ -14,6 +19,19 @@
         newOption.classList.add('existing-option');
         newOption.setAttribute('data-value', value);
         newOption.textContent = label;
+        // handle the role color if applicable
+        const role = roleById(value)
+        if (role) {
+            let color = padHex(role['role_color1']);
+            if (role['role_color2']) {
+                if (role['role_color3']) {
+                    color = `linear-gradient(to left, #${role['role_color1']}, #${role['role_color2']}, #${role['role_color3']})`
+                } else {
+                    color = `linear-gradient(to left, #${role['role_color1']}, #${role['role_color2']})`
+                }
+            }
+            newOption.setAttribute('style', `background: ${color}`);
+        }
 
         // insert before select
         optgroup.insertBefore(newOption, sselect);
