@@ -5,7 +5,7 @@
             {% foreach ($channels as $category => $chans): %}
                 <optgroup label="{% $category %}">
                 {% foreach ($chans as $channel): %}
-                    <option value="{% $channel->channel_id %}"{% if (isset($config_channel) && $config_channel['value'] == $channel->channel_id): %} selected{% endif %}>
+                    <option value="{% $channel->channel_id %}"{% if (isset($config_channel) && $config_channel->value == $channel->channel_id): %} selected{% endif %}>
                         {% if ($channel->type == 'TEXT'): %}#️⃣{% endif %}
                         {% if ($channel->type == 'ANNOUNCEMENT'): %}📢{% endif %}
                         {% if ($channel->type == 'FORUM'): %}🗯️{% endif %}
