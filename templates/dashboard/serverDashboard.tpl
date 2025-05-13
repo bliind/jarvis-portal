@@ -13,7 +13,11 @@
     </div>
 
     <div class="row">
-        {% include "dashboard/cogs/misc.tpl" %}
+        {% include "dashboard/cogs/misc2.tpl" %}
     </div>
 </div>
+{% endblock %}
+
+{% block "javascript" %}
+    <script src="/jarvis/js/tagSelect.js"></script>
 {% endblock %}

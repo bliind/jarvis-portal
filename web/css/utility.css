@@ -32,26 +32,77 @@
 
 .bg-red {
     background-color: var(--red3);
+    border-color: var(--red2);
     color: var(--grey14);
 }
 .bg-green {
     background-color: var(--green3);
+    border-color: var(--green2);
     color: var(--grey14);
 }
 .bg-blue {
     background-color: var(--blue3);
+    border-color: var(--blue2);
     color: var(--grey14);
 }
 
 .btn-red {
     background-color: var(--red);
+    border-color: var(--red2);
     color: var(--grey0);
 }
 .btn-green {
     background-color: var(--green);
+    border-color: var(--green2);
     color: var(--grey0);
 }
 .btn-blue {
     background-color: var(--blue);
+    border-color: var(--blue2);
     color: var(--grey0);
+}
+
+/* tag select thing */
+.option-group {
+    padding: 16px 0;
+    font-size: 0;
+}
+.option-group * {
+    font-size: 1rem;
+}
+.existing-option {
+    display: inline-block;
+    padding: 1em;
+    margin-bottom: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 0.5em;
+    position: relative;
+    cursor: pointer;
+}
+.existing-option:hover:after {
+    content: 'x';
+    position: absolute;
+    top: -0.5em;
+    right: -0.5em;
+    width: 2em;
+    height: 2em;
+    display: inline-grid;
+    place-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--red);
+    z-index: 3;
+}
+
+.special-select {
+    width: fit-content;
+}
+.special-select .select {
+    display: inline-flex;
+    padding-right: 1em;
+}
+.special-select .select:after {
+    padding: 0;
+    top: 0.5em;
+    pointer-events: none;
 }

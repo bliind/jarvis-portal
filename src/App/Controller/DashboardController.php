@@ -7,16 +7,22 @@ use PHPSkel\HttpException;
 use PHPSkel\Parameters;
 use App\Database\ConfigDatabase;
 use App\Database\JarvisServerDatabase;
+use App\Database\JarvisChannelDatabase;
+use App\Database\JarvisRoleDatabase;
 
 class DashboardController extends Controller
 {
     protected $requiresAuth = true;
     protected $allowedUsers;
     private $jarvisServerDatabase;
+    private $jarvisChannelDatabase;
+    private $jarvisRoleDatabase;
     private $configDatabase;
 
     public function construct() {
         $this->jarvisServerDatabase = new JarvisServerDatabase();
+        $this->jarvisChannelDatabase = new JarvisChannelDatabase();
+        $this->jarvisRoleDatabase = new JarvisRoleDatabase();
         $this->configDatabase = new ConfigDatabase();
 
         $parameters = new Parameters();
@@ -57,9 +63,11 @@ class DashboardController extends Controller
     public function serverDashboardAction($server)
     {
         $pageData = [
-            'title'   => 'Dashboard',
-            'server'  => $this->jarvisServerDatabase->getServer($server),
-            'configs' => $this->configDatabase->getConfigs($server),
+            'title'    => 'Dashboard',
+            'server'   => $this->jarvisServerDatabase->getServer($server),
+            'channels' => $this->jarvisChannelDatabase->getChannels($server),
+            'roles'    => $this->jarvisRoleDatabase->getRoles($server),
+            'configs'  => $this->configDatabase->getConfigs($server),
         ];
 
         return $this->render('dashboard/serverDashboard.tpl', $pageData);

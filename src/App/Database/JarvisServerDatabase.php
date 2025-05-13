@@ -6,7 +6,7 @@ use PHPSkel\Parameters;
 class JarvisServerDatabase extends Database {
     public function __construct() {
         $parameters = new Parameters();
-        $this->dsn = $parameters->get('jarvis_dsn');
+        $this->dsn = $parameters->get('config_dsn');
         $this->table = 'servers';
 
         parent::__construct();
