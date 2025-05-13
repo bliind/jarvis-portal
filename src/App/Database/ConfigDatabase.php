@@ -23,10 +23,14 @@ class ConfigDatabase extends Database {
                     channels.channel_id,
                     channels.channel_name,
                     channels.type,
+                    channels.parent_id,
                     roles.role_id,
                     roles.role_name,
-                    roles.role_color,
-                    roles.role_icon
+                    roles.role_position,
+                    roles.role_icon,
+                    roles.role_color1,
+                    roles.role_color2,
+                    roles.role_color3
             ',
             'where' => 'WHERE config.server = :server',
             'join' => '
