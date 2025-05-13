@@ -22,7 +22,7 @@ class ConfigDatabase extends Database {
                     config.value,
                     channels.channel_id,
                     channels.channel_name,
-                    channels.channel_type,
+                    channels.type,
                     roles.role_id,
                     roles.role_name,
                     roles.role_color,
