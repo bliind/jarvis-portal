@@ -188,6 +188,7 @@ nav ul>li:not(.brand):hover {
 }
 
 nav details {
+    border: 0;
     background-color: var(--blue3);
     align-self: baseline;
 }
