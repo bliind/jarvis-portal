@@ -30,6 +30,14 @@
                 {% include "dashboard/elements/channelselect.tpl" %}
             </div>
         </div>
+        <div class="group">
+            <h3>Team Answers Channel</h3>
+            <div class="option-group group" data-key="team_answer_channel">
+                {% $skip = []; %}
+                {% $config_channel = $configs['team_answer_channel']; %}
+                {% include "dashboard/elements/channelselect.tpl" %}
+            </div>
+        </div>
     </details>
 
     <details name="configs">
