@@ -43,8 +43,15 @@ class ConfigDatabase extends Database {
         $rows = $this->select($parts, $bind);
         $out = [];
         foreach ($rows as $row) {
-            if (!isset($out[$row->key])) $out[$row->key] = [];
-            $out[$row->key][] = $row;
+            // plural key name means multiple entries
+            if (substr($row->key, -1, 1) == 's') {
+            if (!isset($out[$row->key])) {
+                    $out[$row->key] = [];
+                }
+                $out[$row->key][] = $row;
+            } else {
+                $out[$row->key] = $row;
+            }
         }
 
         return $out;
