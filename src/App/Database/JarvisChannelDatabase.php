@@ -32,7 +32,7 @@ class JarvisChannelDatabase extends Database {
         $channels = [];
         // isolate the categories and sort them
         $categories = array_filter($dbChans, function($e) { return $e->type == 'CATEGORY'; });
-        usort($categories, 'sortChannels');
+        usort($categories, function($a, $b) { return $this->sortChannels($a, $b); });
 
         // create a searchable list of category name to id
         $cats = [];
@@ -51,7 +51,7 @@ class JarvisChannelDatabase extends Database {
         }
 
         foreach ($channels as $category => &$chans) {
-            usort($chans, 'sortChannels');
+            usort($chans, function($a, $b) { return $this->sortChannels($a, $b); });
         }
 
         return $channels;
