@@ -1,6 +1,6 @@
 <div class="col">
     <div class="group">
-        <label>Moderator Roles</label>
+        <h3>Moderator Roles</h3>
         <div class="option-group group" data-key="moderator_roles">
             {% $skip = []; %}
             {% foreach ($configs['moderator_roles'] as $role): %}
@@ -12,7 +12,7 @@
     </div>
 
     <div class="group">
-        <label>Developer Roles</label>
+        <h3>Developer Roles</h3>
         <div class="option-group group" data-key="developer_roles">
             {% $skip = []; %}
             {% foreach ($configs['developer_roles'] as $role): %}
@@ -24,7 +24,7 @@
     </div>
 
     <div class="group">
-        <label>Caps Protection Immune Roles</label>
+        <h3>Caps Protection Immune Roles</h3>
         <div class="option-group group" data-key="caps_prot_immune_roles">
             {% $skip = []; %}
             {% foreach ($configs['caps_prot_immune_roles'] as $role): %}
@@ -36,7 +36,7 @@
     </div>
 
     <div class="group">
-        <label>Caps Protection Immune Channels</label>
+        <h3>Caps Protection Immune Channels</h3>
         <div class="option-group group" data-key="caps_prot_immune_channels">
             {% $skip = []; %}
             {% foreach ($configs['caps_prot_immune_channels'] as $channel): %}
