@@ -65,9 +65,9 @@ class DashboardController extends Controller
         $roles = $this->jarvisRoleDatabase->getRoles($server);
         // sort by role.position, backwards
         usort($roles, function($a, $b) {
-            if ($a->position < $b->position) {
+            if ($a->role_position < $b->role_position) {
                 return 1;
-            } elseif ($a->position > $b->position) {
+            } elseif ($a->role_position > $b->role_position) {
                 return -1;
             }
 
