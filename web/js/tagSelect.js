@@ -21,7 +21,7 @@
         newOption.textContent = label;
         // handle the role color if applicable
         const role = roleById(value)
-        if (role && role['color'] != '0') {
+        if (role && role['role_color1'] != '0') {
             let color = `#${padHex(role['role_color1'])}`;
             if (role['role_color2']) {
                 if (role['role_color3']) {
