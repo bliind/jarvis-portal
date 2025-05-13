@@ -10,6 +10,6 @@
         {% $color = '#' . sprintf('%06s', $role->role_color1); %}
     {% endif %}
 
-    <span class="existing-option" style="background:{% $color %}" data-value="{% $role->value %}">{% $role->role_name %}</span>
+    <span class="existing-option" style="background:{% $color %};color:#000" data-value="{% $role->value %}">{% $role->role_name %}</span>
     {% $skip[] = $role->role_id; %}
 {% endforeach %}

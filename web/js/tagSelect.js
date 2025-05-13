@@ -30,7 +30,7 @@
                     color = `linear-gradient(to left, #${role['role_color1']}, #${role['role_color2']})`
                 }
             }
-            newOption.setAttribute('style', `background: ${color}`);
+            newOption.setAttribute('style', `background:${color};color:#000;`);
         }
 
         // insert before select
