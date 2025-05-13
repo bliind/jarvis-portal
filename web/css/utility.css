@@ -114,6 +114,6 @@
     pointer-events: none;
 }
 
-[style~="background:#000000"] {
+[style*="background:#000000"] {
     color: #FFF !important;
 }
