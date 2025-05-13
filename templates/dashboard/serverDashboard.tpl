@@ -18,7 +18,9 @@
 
     <div class="row">
         <div class="col">
-            <button class="btn-green" id="save">Save Changes</button>
+            <div class="group">
+                <button class="btn-green" id="save">Save Changes</button>
+            </div>
         </div>
     </div>
 </div>
