@@ -17,6 +17,7 @@
 
         // insert before select
         optgroup.insertBefore(newOption, sselect);
+        optgroup.classList.add('changed');
 
         // mark the option hidden
         for (let opt of event.target.options) {
@@ -29,10 +30,12 @@
     
     function handleExistingOptionClick(event) {
         const value = event.target.getAttribute('data-value');
-        const label = event.target.textContent;
 
-        // find select in the parent
-        const select = event.target.parentElement.querySelector('select');
+        // set changed class for submitting
+        const optgroup = event.target.parentElement;
+        optgroup.classList.add('changed');
+        // find select in the optgroup
+        const select = optgroup.querySelector('select');
         // unhide the option
         for (let opt of select.options) {
             if (opt.value == value) {
@@ -46,7 +49,7 @@
     }
 
     function createPostData() {
-        const optGroups = document.querySelectorAll('.option-group');
+        const optGroups = document.querySelectorAll('.option-group.changed');
         const data = {};
         for (let optGroup of optGroups) {
             const key = optGroup.getAttribute('data-key');

@@ -15,6 +15,12 @@
     <div class="row">
         {% include "dashboard/cogs/misc2.tpl" %}
     </div>
+
+    <div class="row">
+        <div class="col">
+            <button class="btn-green" id="save">Save Changes</button>
+        </div>
+    </div>
 </div>
 {% endblock %}
 
