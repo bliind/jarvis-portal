@@ -1,7 +1,7 @@
 <div class="special-select">
     <label class="select">
         <select class="special-option">
-            <option value="" hidden selected>Select One</option>
+            <option value="" hidden selected>Add Channel</option>
             {% foreach ($channels as $category => $chans): %}
                 <optgroup label="{% $category %}">
                 {% foreach ($chans as $channel): %}
