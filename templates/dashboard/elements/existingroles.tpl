@@ -2,9 +2,9 @@
 {% foreach ($config_roles as $role): %}
     {% if (!is_null($role->role_color2)): %}
         {% if (!is_null($role->role_color3)): %}
-            {% $color = 'linear-gradient(#' . sprintf('%06s', $role->role_color1) . ', #' . sprintf('%06s', $role->role_color2) .', #' . sprintf('%06s', $role->role_color3) .')'; %}
+            {% $color = 'linear-gradient(to left, #' . sprintf('%06s', $role->role_color1) . ', #' . sprintf('%06s', $role->role_color2) .', #' . sprintf('%06s', $role->role_color3) .')'; %}
         {% else: %}
-            {% $color = 'linear-gradient(#' . sprintf('%06s', $role->role_color1) . ', #' . sprintf('%06s', $role->role_color2) .')'; %}
+            {% $color = 'linear-gradient(to left, #' . sprintf('%06s', $role->role_color1) . ', #' . sprintf('%06s', $role->role_color2) .')'; %}
         {% endif %}
     {% else: %}
         {% $color = '#' . sprintf('%06s', $role->role_color1); %}
