@@ -27,5 +27,8 @@
 {% endblock %}
 
 {% block "javascript" %}
+    <script>
+        const all_roles = JSON.parse('{% echo(json_encode($roles)); %}');
+    </script>
     <script src="/jarvis/js/tagSelect.js"></script>
 {% endblock %}
