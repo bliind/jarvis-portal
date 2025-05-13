@@ -1,13 +1,16 @@
 <div class="col">
-    <div class="group">
-        <h3>Moderator Roles</h3>
-        <p class="text-sm">Immune to caps protection. Flags ask-the-team posts on reply.</p>
-        <div class="option-group group" data-key="moderator_roles">
-            {% $config_roles = $configs['moderator_roles']; %}
-            {% include "dashboard/elements/existingroles.tpl" %}
-            {% include "dashboard/elements/roleselect.tpl" %}
+    <details open="">
+        <summary class="text-big">Main</summary>
+        <div class="group">
+            <h3>Moderator Roles</h3>
+            <p class="text-sm">Immune to caps protection. Flags ask-the-team posts on reply.</p>
+            <div class="option-group group" data-key="moderator_roles">
+                {% $config_roles = $configs['moderator_roles']; %}
+                {% include "dashboard/elements/existingroles.tpl" %}
+                {% include "dashboard/elements/roleselect.tpl" %}
+            </div>
         </div>
-    </div>
+    </details>
 
     <details>
         <summary class="text-big">Team Answers</summary>
@@ -32,7 +35,7 @@
     <details>
         <summary class="text-big">Caps Protection</summary>
         <div class="group">
-            <h4>Immune Roles</h4>
+            <h3>Immune Roles</h3>
             <div class="option-group group" data-key="caps_prot_immune_roles">
                 {% $config_roles = $configs['caps_prot_immune_roles']; %}
                 {% include "dashboard/elements/existingroles.tpl" %}
@@ -41,7 +44,7 @@
         </div>
 
         <div class="group">
-            <h4>Immune Channels</h4>
+            <h3>Immune Channels</h3>
             <div class="option-group group" data-key="caps_prot_immune_channels">
                 {% $config_channels = $configs['caps_prot_immune_channels']; %}
                 {% include "dashboard/elements/existingchannels.tpl" %}
