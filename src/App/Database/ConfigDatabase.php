@@ -40,7 +40,7 @@ class ConfigDatabase extends Database {
         $out = [];
         foreach ($rows as $row) {
             if (!isset($out[$row->key])) $out[$row->key] = [];
-            $out[$row->key][] = $row->value;
+            $out[$row->key][] = $row;
         }
 
         return $out;

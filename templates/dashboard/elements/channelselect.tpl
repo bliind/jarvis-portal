@@ -3,7 +3,7 @@
         <select class="special-option">
             <option value="" hidden selected>Select One</option>
             {% foreach ($channels as $channel): %}
-            <option value="{% $channel['channel_id'] %}">{% $channel['name'] %}</option>
+            <option value="{% $channel->channel_id %}">{% $channel->channel_name %}</option>
             {% endforeach %}
         </select>
     </label>
