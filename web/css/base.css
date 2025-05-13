@@ -192,6 +192,9 @@ nav details {
     background-color: var(--blue3);
     align-self: baseline;
 }
+nav details summary {
+    margin-top: 0;
+}
 
 .hamburger {
     display: none;
