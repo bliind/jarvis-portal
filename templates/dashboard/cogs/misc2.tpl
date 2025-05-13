@@ -24,7 +24,7 @@
     </div>
 
     <details>
-        <summary><h3>Caps Protection</h3></summary>
+        <summary class="text-big">Caps Protection</summary>
         <div class="group">
             <h4>Immune Roles</h4>
             <div class="option-group group" data-key="caps_prot_immune_roles">

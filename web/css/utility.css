@@ -3,14 +3,21 @@
 .pos-abs {position: absolute}
 .pos-rel {position: relative}
 
+.text-big {
+    font-size: 1.5rem;
+}
+.text-sm {
+    font-size: 0.6rem;
+}
+
 .row {
     width: 100%;
     grid-column: 1 / -1;
 }
 
 .group {
-    margin: 0.5em;
-    padding: 0.25em;
+    margin: 0.5rem;
+    padding: 0.25rem;
 }
 
 .btn-group {
@@ -72,7 +79,7 @@
 }
 .existing-option {
     display: inline-block;
-    padding: 1em;
+    padding: 1rem;
     margin-bottom: 0.5em;
     border: 1px solid #ccc;
     border-radius: 0.5em;
@@ -82,8 +89,8 @@
 .existing-option:hover:after {
     content: 'x';
     position: absolute;
-    top: -0.5em;
-    right: -0.5em;
+    top: -0.5rem;
+    right: -0.5rem;
     width: 2em;
     height: 2em;
     display: inline-grid;
@@ -99,10 +106,10 @@
 }
 .special-select .select {
     display: inline-flex;
-    padding-right: 1em;
+    padding-right: 1rem;
 }
 .special-select .select:after {
     padding: 0;
-    top: 0.5em;
+    top: 0.5rem;
     pointer-events: none;
 }
