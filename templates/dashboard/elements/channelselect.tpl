@@ -7,7 +7,7 @@
                 {% foreach ($chans as $channel): %}
                     {% if (!in_array($channel->channel_id, $skip)): %}
                     <option value="{% $channel->channel_id %}">
-                        {% if ($channel->type == 'TEXT'): %}#{% endif %}
+                        {% if ($channel->type == 'TEXT'): %}#️⃣{% endif %}
                         {% if ($channel->type == 'ANNOUNCEMENT'): %}📢{% endif %}
                         {% if ($channel->type == 'FORUM'): %}🗯️{% endif %}
                         {% if ($channel->type == 'VOICE'): %}🎤{% endif %}
