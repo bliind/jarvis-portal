@@ -25,9 +25,9 @@
             let color = `#${padHex(role['role_color1'])}`;
             if (role['role_color2']) {
                 if (role['role_color3']) {
-                    color = `linear-gradient(to left, #${role['role_color1']}, #${role['role_color2']}, #${role['role_color3']})`
+                    color = `linear-gradient(to left, #${padHex(role['role_color1'])}, #${padHex(role['role_color2'])}, #${padHex(role['role_color3'])})`
                 } else {
-                    color = `linear-gradient(to left, #${role['role_color1']}, #${role['role_color2']})`
+                    color = `linear-gradient(to left, #${padHex(role['role_color1'])}, #${padHex(role['role_color2'])})`
                 }
             }
             newOption.setAttribute('style', `background:${color};color:#000;`);
