@@ -28,7 +28,7 @@ class ConfigDatabase extends Database {
                     roles.role_color,
                     roles.role_icon
             ',
-            'where' => 'WHERE server = :server',
+            'where' => 'WHERE config.server = :server',
             'join' => '
                 LEFT JOIN roles ON roles.role_id = config.value AND roles.server = config.server
                 LEFT JOIN channels ON channels.channel_id = config.value AND channels.server = config.server
