@@ -3,11 +3,8 @@
         <h3>Moderator Roles</h3>
         <p class="text-sm">Immune to caps protection. Flags ask-the-team posts on reply.</p>
         <div class="option-group group" data-key="moderator_roles">
-            {% $skip = []; %}
-            {% foreach ($configs['moderator_roles'] as $role): %}
-            <span class="existing-option" data-value="{% $role->value %}">{% $role->role_name %}</span>
-            {% $skip[] = $role->role_id; %}
-            {% endforeach %}
+            {% $config_roles = $configs['moderator_roles']; %}
+            {% include "dashboard/elements/existingroles.tpl" %}
             {% include "dashboard/elements/roleselect.tpl" %}
         </div>
     </div>
@@ -17,7 +14,7 @@
         <div class="group">
             <h3>Developer Roles</h3>
             <div class="option-group group" data-key="developer_roles">
-                {% $config_roles = $configs['developer_roles'] %}
+                {% $config_roles = $configs['developer_roles']; %}
                 {% include "dashboard/elements/existingroles.tpl" %}
                 {% include "dashboard/elements/roleselect.tpl" %}
             </div>
@@ -37,11 +34,8 @@
         <div class="group">
             <h4>Immune Roles</h4>
             <div class="option-group group" data-key="caps_prot_immune_roles">
-                {% $skip = []; %}
-                {% foreach ($configs['caps_prot_immune_roles'] as $role): %}
-                <span class="existing-option" data-value="{% $role->value %}">{% $role->role_name %}</span>
-                {% $skip[] = $role->role_id; %}
-                {% endforeach %}
+                {% $config_roles = $configs['caps_prot_immune_roles']; %}
+                {% include "dashboard/elements/existingroles.tpl" %}
                 {% include "dashboard/elements/roleselect.tpl" %}
             </div>
         </div>
@@ -49,11 +43,8 @@
         <div class="group">
             <h4>Immune Channels</h4>
             <div class="option-group group" data-key="caps_prot_immune_channels">
-                {% $skip = []; %}
-                {% foreach ($configs['caps_prot_immune_channels'] as $channel): %}
-                <span class="existing-option" data-value="{% $channel->value %}">#{% $channel->channel_name %}</span>
-                {% $skip[] = $channel->channel_id; %}
-                {% endforeach %}
+                {% $config_channels = $configs['caps_prot_immune_channels']; %}
+                {% include "dashboard/elements/existingchannels.tpl" %}
                 {% include "dashboard/elements/channelselect.tpl" %}
             </div>
         </div>
