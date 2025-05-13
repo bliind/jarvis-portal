@@ -40,7 +40,7 @@
         <div class="option-group group" data-key="caps_prot_immune_channels">
             {% $skip = []; %}
             {% foreach ($configs['caps_prot_immune_channels'] as $channel): %}
-            <span class="existing-option" data-value="{% $channel->value %}">{% $channel->channel_name %}</span>
+            <span class="existing-option" data-value="{% $channel->value %}">#{% $channel->channel_name %}</span>
             {% $skip[] = $channel->channel_id; %}
             {% endforeach %}
             {% include "dashboard/elements/channelselect.tpl" %}
