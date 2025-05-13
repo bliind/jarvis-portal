@@ -97,7 +97,8 @@
     place-items: center;
     justify-content: center;
     border-radius: 50%;
-    background-color: var(--red);
+    background-color: var(--red2);
+    color: var(--grey0);
     z-index: 3;
 }
 
