@@ -17,6 +17,36 @@ class JarvisChannelDatabase extends Database {
         $parts = ['where' => 'WHERE server = :server'];
         $bind = [':server' => (int)$server];
 
-        return $this->select($parts, $bind);
+        $dbChans = $this->select($parts, $bind);
+
+        $channels = [];
+        // isolate the categories and sort them
+        $categories = array_filter($dbChans, function($e) { return $e->type == 'CATEGORY'; });
+        usort($categories, function($a, $b) {
+            if ($a->channel_position > $b->channel_position) {
+                return 1;
+            } elseif ($a->channel_position < $b->channel_position) {
+                return -1;
+            }
+            return 0;
+        });
+
+        // create a searchable list of category name to id
+        $cats = [];
+        foreach ($categories as $category) {
+            $cats[$category->channel_name] = $category->channel_id;
+            // also add to output array
+            $channels[$category->channel_name] = [];
+        }
+
+        // add channels to output arrays under their parents
+        foreach ($dbChans as $channel) {
+            if (!is_null($channel->parent_id)) {
+                $parentName = array_search($channel->parent_id, $cats);
+                $channels[$parentName][] = $channel;
+            } // TODO: handle else
+        }
+
+        return $channels;
     }
 }

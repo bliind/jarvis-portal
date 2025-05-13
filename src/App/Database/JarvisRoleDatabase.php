@@ -17,6 +17,19 @@ class JarvisRoleDatabase extends Database {
         $parts = ['where' => 'WHERE server = :server'];
         $bind = [':server' => (int)$server];
 
-        return $this->select($parts, $bind);
+        $roles = $this->select($parts, $bind);
+
+        // sort by role.position, backwards
+        usort($roles, function($a, $b) {
+            if ($a->role_position < $b->role_position) {
+                return 1;
+            } elseif ($a->role_position > $b->role_position) {
+                return -1;
+            }
+
+            return 0;
+        });
+
+        return $roles;
     }
 }

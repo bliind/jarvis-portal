@@ -63,21 +63,12 @@ class DashboardController extends Controller
     public function serverDashboardAction($server)
     {
         $roles = $this->jarvisRoleDatabase->getRoles($server);
-        // sort by role.position, backwards
-        usort($roles, function($a, $b) {
-            if ($a->role_position < $b->role_position) {
-                return 1;
-            } elseif ($a->role_position > $b->role_position) {
-                return -1;
-            }
-
-            return 0;
-        });
+        $channels = $this->jarvisChannelDatabase->getChannels($server);
 
         $pageData = [
             'title'    => 'Dashboard',
             'server'   => $this->jarvisServerDatabase->getServer($server),
-            'channels' => $this->jarvisChannelDatabase->getChannels($server),
+            'channels' => $channels,
             'roles'    => $roles,
             'configs'  => $this->configDatabase->getConfigs($server),
         ];
