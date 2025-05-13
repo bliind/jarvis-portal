@@ -17,22 +17,16 @@
         <div class="group">
             <h3>Developer Roles</h3>
             <div class="option-group group" data-key="developer_roles">
-                {% $skip = []; %}
-                {% foreach ($configs['developer_roles'] as $role): %}
-                <span class="existing-option" data-value="{% $role->value %}">{% $role->role_name %}</span>
-                {% $skip[] = $role->role_id; %}
-                {% endforeach %}
+                {% $config_roles = $configs['developer_roles'] %}
+                {% include "dashboard/elements/existingroles.tpl" %}
                 {% include "dashboard/elements/roleselect.tpl" %}
             </div>
         </div>
         <div class="group">
             <h3>Team Questions Channels</h3>
             <div class="option-group group" data-key="team_question_channels">
-                {% $skip = []; %}
-                {% foreach ($configs['team_question_channels'] as $channel): %}
-                <span class="existing-option" data-value="{% $channel->value %}">{% $channel->channel_name %}</span>
-                {% $skip[] = $channel->channel_id; %}
-                {% endforeach %}
+                {% $config_channels = $configs['team_question_channels']; %}
+                {% include "dashboard/elements/existingchannels.tpl" %}
                 {% include "dashboard/elements/channelselect.tpl" %}
             </div>
         </div>
