@@ -13,7 +13,7 @@
     </div>
 
     <details>
-    <summary class="text-big">Team Answers</summary>
+        <summary class="text-big">Team Answers</summary>
         <div class="group">
             <h3>Developer Roles</h3>
             <div class="option-group group" data-key="developer_roles">
@@ -36,7 +36,7 @@
                 {% include "dashboard/elements/channelselect.tpl" %}
             </div>
         </div>
-    </summary>
+    </details>
 
     <details>
         <summary class="text-big">Caps Protection</summary>
