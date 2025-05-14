@@ -37,6 +37,16 @@
                 {% include "dashboard/elements/singlechannel.tpl" %}
             </div>
         </div>
+        <div class="group">
+            <h3>Team Response Tag</h3>
+            <input type="text" name="team_response_tag" id="team_response_tag" value="{% $configs['team_response_tag']->value %}">
+        </div>
+        <div class="group">
+            <h3>Moderator Response Tag</h3>
+            <input type="text" name="moderator_response_tag" id="moderator_response_tag" value="{% $configs['moderator_response_tag']->value %}">
+        </div>
+        <!-- team_response_tag -->
+        <!-- moderator_response_tag -->
     </details>
 
     <details name="configs">
@@ -58,5 +68,8 @@
                 {% include "dashboard/elements/channelselect.tpl" %}
             </div>
         </div>
+
+        <!-- caps_prot_message -->
+        <!-- caps_prot_percent -->
     </details>
 </div>
