@@ -39,11 +39,15 @@
         </div>
         <div class="group">
             <h3>Team Response Tag</h3>
-            <input class="special-select" type="text" name="team_response_tag" id="team_response_tag" value="{% $configs['team_response_tag']->value %}">
+            <div class="group">
+                <input class="special-select" type="text" name="team_response_tag" id="team_response_tag" value="{% $configs['team_response_tag']->value %}">
+            </div>
         </div>
         <div class="group">
             <h3>Moderator Response Tag</h3>
-            <input class="special-select" type="text" name="moderator_response_tag" id="moderator_response_tag" value="{% $configs['moderator_response_tag']->value %}">
+            <div class="group">
+                <input class="special-select" type="text" name="moderator_response_tag" id="moderator_response_tag" value="{% $configs['moderator_response_tag']->value %}">
+            </div>
         </div>
         <!-- team_response_tag -->
         <!-- moderator_response_tag -->
