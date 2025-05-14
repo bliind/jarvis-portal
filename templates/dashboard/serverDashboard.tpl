@@ -12,7 +12,7 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row configs">
         {% include "dashboard/cogs/misc2.tpl" %}
     </div>
 

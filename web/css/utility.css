@@ -117,3 +117,8 @@
 [style*="background:#000000"] {
     color: #FFF !important;
 }
+
+.configs details {
+    width: 60%;
+    margin: 0 auto;
+}
